@@ -95,7 +95,7 @@ class BlogDetailAPI(
     def get_permissions(self):
         if self.request.method == 'GET':
             return [permissions.IsAuthenticated()]
-        else :
+        elif self.request.method == 'POST':
             return [permissions.IsAdminUser()]
         return []
     
